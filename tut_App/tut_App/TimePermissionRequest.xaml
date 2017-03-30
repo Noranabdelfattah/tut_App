@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tut_App.TimePermissionRequest">
+
+  <ContentPage.Content>
+
+    <StackLayout Orientation="Vertical" Padding="10,5,10,5">
+      
+      <TableView Intent="Form">
+        <TableRoot>
+          <TableSection Title="Basic Data">
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" >
+
+                <Label Text="Permission" FontSize="12" VerticalOptions="Start" HorizontalOptions="Start" />
+                <Picker  x:Name="PermissionPicker"  HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                  <Picker.Items>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                  </Picker.Items>
+                </Picker>
+
+              </StackLayout>
+            </ViewCell>
+
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" Spacing="1.3" >
+
+                <Label Text="Permission Date" FontSize="10" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                <Label Text="From" HorizontalTextAlignment="Start"  VerticalTextAlignment="Start" FontSize="10" VerticalOptions="Center" HorizontalOptions="Center" />
+                <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start" ></DatePicker>
+
+                <Label Text="To" HorizontalTextAlignment="Start"  FontSize="10" VerticalOptions="Center" HorizontalOptions="End" />
+                <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start"></DatePicker>
+
+              </StackLayout>
+            </ViewCell>
+
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" >
+
+                <Label Text="Other information " FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Editor  Text=" " HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Editor>
+
+              </StackLayout>
+            </ViewCell>
+
+
+          </TableSection>
+
+          <TableSection Title="Reference Data">
+
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+
+                <Label Text="Year" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" ></Label>
+                <Entry HorizontalOptions="FillAndExpand"  VerticalOptions="Start"></Entry>
+
+                <Label Text="Number" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" ></Label>
+                <Entry HorizontalOptions="FillAndExpand"  VerticalOptions="Start"></Entry>
+              </StackLayout>
+            </ViewCell>
+
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Issue Date" HorizontalTextAlignment="Start"  FontSize="10" VerticalOptions="Center" HorizontalOptions="Start" />
+                <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start" ></DatePicker>
+
+                <Label Text="Exec.Date" HorizontalTextAlignment="Start"  FontSize="10" VerticalOptions="Center" HorizontalOptions="Start" />
+                <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start"></DatePicker>
+              </StackLayout>
+            </ViewCell>
+
+
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+
+                <Label Text="Status" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker  x:Name="RefStatusPicker"  HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                  <Picker.Items>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                  </Picker.Items>
+                </Picker>
+
+                <Label Text="Source" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker  x:Name="RefSourcePicker"  HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                  <Picker.Items>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                  </Picker.Items>
+                </Picker>
+
+
+              </StackLayout>
+            </ViewCell>
+
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+
+                <Label Text="Description " FontSize="12" VerticalOptions="Start" HorizontalOptions="Start" />
+                <Editor  Text=" " HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Editor>
+              </StackLayout>
+            </ViewCell>
+  </TableSection>
+
+        </TableRoot>
+      </TableView>
+
+     <StackLayout Orientation="Horizontal" Spacing="0.1">
+    <Button x:Name="Savebtn" Text="Save"  HorizontalOptions="Start"  VerticalOptions="Start" WidthRequest="60" />
+      <Button x:Name="Submitbtn" Text="Submit"  HorizontalOptions="Start"  VerticalOptions="Start" />
+      <Button x:Name="Cancelbtn" Text="Cancel" HorizontalOptions="Start"  VerticalOptions="Start" />
+    <Button x:Name="Requestbtn" Text="Request&#10;Flow Order"  HorizontalOptions="Start"  VerticalOptions="Start"   />
+
+  </StackLayout>
+    
+    </StackLayout>
+
+
+  </ContentPage.Content>
+
+</ContentPage>
