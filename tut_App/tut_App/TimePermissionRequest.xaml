@@ -6,7 +6,7 @@
   <ContentPage.Content>
 
     <StackLayout Orientation="Vertical" Padding="10,5,10,5">
-      
+
       <TableView Intent="Form">
         <TableRoot>
           <TableSection Title="Basic Data">
@@ -25,16 +25,30 @@
             </ViewCell>
 
             <ViewCell>
-              <StackLayout Orientation="Horizontal" Spacing="1.3" >
+              <StackLayout Orientation="Horizontal"  WidthRequest="150" Spacing="2">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start"  >
 
-                <Label Text="Permission Date" FontSize="10" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Center" />
+                  <Label Text="Permission Date" FontSize="11" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"
+                         VerticalOptions="Center" HorizontalOptions="Start" />
+                </StackLayout>
 
-                <Label Text="From" HorizontalTextAlignment="Start"  VerticalTextAlignment="Start" FontSize="10" VerticalOptions="Center" HorizontalOptions="Center" />
-                <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start" ></DatePicker>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"  WidthRequest="150" Spacing="1" >
 
-                <Label Text="To" HorizontalTextAlignment="Start"  FontSize="10" VerticalOptions="Center" HorizontalOptions="End" />
-                <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start"></DatePicker>
+                  <Label Text="From" HorizontalTextAlignment="Start"  FontSize="10"
+                              VerticalOptions="Center" HorizontalOptions="FillAndExpand"  />
 
+                  <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="End" VerticalOptions="Center" ></DatePicker>
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End"  WidthRequest="140" Spacing="1" >
+
+                  <Label Text="To" HorizontalTextAlignment="Start"  FontSize="10" VerticalOptions="Center" HorizontalOptions="Fill" WidthRequest="80"  />
+                  <DatePicker  Format="dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="Start" ></DatePicker>
+
+
+                </StackLayout>
               </StackLayout>
             </ViewCell>
 
@@ -104,19 +118,19 @@
                 <Editor  Text=" " HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Editor>
               </StackLayout>
             </ViewCell>
-  </TableSection>
+          </TableSection>
 
         </TableRoot>
       </TableView>
 
-     <StackLayout Orientation="Horizontal" Spacing="0.1">
-    <Button x:Name="Savebtn" Text="Save"  HorizontalOptions="Start"  VerticalOptions="Start" WidthRequest="60" />
-      <Button x:Name="Submitbtn" Text="Submit"  HorizontalOptions="Start"  VerticalOptions="Start" />
-      <Button x:Name="Cancelbtn" Text="Cancel" HorizontalOptions="Start"  VerticalOptions="Start" />
-    <Button x:Name="Requestbtn" Text="Request&#10;Flow Order"  HorizontalOptions="Start"  VerticalOptions="Start"   />
+      <StackLayout Orientation="Horizontal" Spacing="0.1">
+        <Button x:Name="Savebtn" Text="Save"  HorizontalOptions="Start"  VerticalOptions="Start" WidthRequest="60" />
+        <Button x:Name="Submitbtn" Text="Submit"  HorizontalOptions="Start"  VerticalOptions="Start" />
+        <Button x:Name="Cancelbtn" Text="Cancel" HorizontalOptions="Start"  VerticalOptions="Start" />
+        <Button x:Name="Requestbtn" Text="Request&#10;Flow Order"  HorizontalOptions="Start"  VerticalOptions="Start"   />
 
-  </StackLayout>
-    
+      </StackLayout>
+
     </StackLayout>
 
 
